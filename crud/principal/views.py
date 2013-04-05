@@ -8,7 +8,7 @@ from principal.form import ProductoForm
 def index(request):
 	productos = producto.objects.all()
 	return render_to_response("index.html", {"productos":productos}, context_instance = RequestContext(request))
-
+cesar aqui
 def agregar_producto(request):
 	if request.method == "POST":
 		formulario = ProductoForm(request.POST)
