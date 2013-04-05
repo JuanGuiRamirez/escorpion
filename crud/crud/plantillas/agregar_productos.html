@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block titulo %} Agregar Producto{% endblock titulo %}
+
+{% block contenido %}
+<form method ="post"> {% csrf_token %}
+	{{formulario.as_p}}
+	<input type = "submit" value = "Agregar" class = "btn btn-success">
+	<a href="{%url principal.views.index %}" class= "btn btn-inverse">Volver</a>
+</form>
+
+{% endblock contenido %}

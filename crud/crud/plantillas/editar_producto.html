@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block titulo %} Editar Producto {% endblock titulo %}
+
+{% block contenido %}
+<form method ="post"> {% csrf_token %}
+	{{formulario.as_p}}
+	<input type = "submit" value = "Terminar" class = "btn btn-success">
+	<a href="{%url principal.views.index %}" class= "btn btn-info">Volver</a>
+</form>
+
+{% endblock contenido %}
