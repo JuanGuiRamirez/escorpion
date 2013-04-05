@@ -5,6 +5,7 @@ from django.template import RequestContext
 from principal.models import producto
 from principal.form import ProductoForm
 
+
 def index(request):
 	productos = producto.objects.all()
 	return render_to_response("index.html", {"productos":productos}, context_instance = RequestContext(request))
@@ -36,3 +37,5 @@ def editar_producto(request, id_producto):
 		formulario =ProductoForm(instance=product)
 
 	return render_to_response("editar_producto.html", {"formulario":formulario}, context_instance = RequestContext(request))
+
+
